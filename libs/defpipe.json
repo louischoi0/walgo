@@ -1,0 +1,10 @@
+{
+    "sansung": {
+        "base_dir": "../data/ss",
+        "include_regex": "DJEPGS0.701-*",
+
+        "col_identify_func": "lambda x: x.replace('DJEPGS0.701-', '').replace('.F_CV.csv', '')",
+        "output_path": "DJEPGS0_input_ss_2021.csv",
+        "drop_columns": ["472-FRI-8002"]
+    }
+}

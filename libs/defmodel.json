@@ -1,0 +1,36 @@
+{
+    "s10": {
+        "input_file": "DJEPGS0_input_ss_2021.csv",
+        "model_name": "models.VanillaLSTM",
+        "model_args": {
+            "hidden_dimension": 32,
+            "out_features": 1,
+            "drop_rate": 0.1,
+            "label_width":1
+        },
+
+        "loss": "tf.keras.losses.MeanSquaredError()",
+
+        "dataset": {
+            "resample": "1min",
+            "start_date": "2021-03-17",
+            "ref_days": 100
+        },
+
+        "meta" : {
+            "scaler": "MinMaxScaler",
+            "scaler._mean": 55.53503647846014, 
+            "scaler._scale": 30.40842489383762
+        },
+
+        "window_generator": {
+            "shift": 10,
+            "input_width": 9,
+            "label_width": 1
+        }
+    }
+}
+
+
+
+
